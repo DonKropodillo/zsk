@@ -15,12 +15,17 @@
 
         while ($rows = $result->fetch_assoc()) {
           echo<<<ROW
-          Id: $rows[id]<br>
-          Imie: $rows[name]<br>
-          Nazwisko: $rows[surname]<br>
-          Rok: $rows[birthday]
+          <tr>
+
+        <td>  Id: $rows[id]<br> </td>
+        <td>  Imie: $rows[name]<br> </td>
+        <td>  Nazwisko: $rows[surname]<br> </td>
+        <td>  Rok: $rows[birthday] </td>
+        <td><a href="scripts/delete.pl?"id=$rows[id]>Usuń</a></td>
+        </tr>
 
           <hr>
+          </tr>
 ROW;
         }
 
